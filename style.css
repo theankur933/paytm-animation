@@ -1,0 +1,67 @@
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 248px;
+  height: 496px;
+}
+.center-image {
+  width: 248px;
+  height: 496px;
+  transform: scale(0.9);
+  animation: centerImg 0.4s linear forwards;
+}
+
+@keyframes centerImg {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+.chemist-shops-img,
+.milk-shop-img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.milk-shop-img {
+  transform: translateX(-300px);
+  opacity: 0;
+  visibility: hidden;
+  animation: milkshop 0.4s linear 0.5s forwards;
+}
+
+@keyframes milkshop {
+  to {
+    transform: translateX(-356px);
+    opacity: 1;
+    visibility: visible;
+  }
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.chemist-shops-img {
+  transform: translateX(200px);
+  opacity: 0;
+  visibility: hidden;
+  animation: chemist 0.4s linear 0.5s forwards;
+}
+@keyframes chemist {
+  to {
+    transform: translateX(260px);
+    opacity: 1;
+    visibility: visible;
+  }
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
